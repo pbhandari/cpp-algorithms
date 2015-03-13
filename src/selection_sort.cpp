@@ -17,11 +17,7 @@
 #include <iterator>
 #include <vector>
 
-auto print_arr = [](const auto& vec) {
-    std::copy(std::begin(vec), std::end(vec),
-            std::ostream_iterator<int>(std::cout, " "));
-    std::cout << std::endl;
-};
+#include "misc.hpp"
 
 template<class Iterator, typename Order>
 Iterator

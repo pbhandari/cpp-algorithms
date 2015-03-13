@@ -20,6 +20,8 @@
 #include <vector>
 #include <ctime>
 
+#include "misc.hpp"
+
 template<typename Iterator, typename Order>
 void
 my_qsort(Iterator start, Iterator finish, Order ord)
@@ -48,11 +50,6 @@ my_qsort(Iterator start, Iterator finish, Order ord)
 int main(int argc, char** argv)
 {
     std::srand(std::time(nullptr));
-    auto print_arr = [](const auto& vec) {
-        std::copy(std::begin(vec), std::end(vec),
-                  std::ostream_iterator<int>(std::cout, " "));
-        std::cout << std::endl;
-    };
 
     std::vector<int> numbers;
 

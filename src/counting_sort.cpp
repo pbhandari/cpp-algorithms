@@ -21,11 +21,7 @@
 #include <vector>
 #include <ctime>
 
-auto print_arr = [](const auto& vec) {
-    std::copy(std::begin(vec), std::end(vec),
-            std::ostream_iterator<int>(std::cout, " "));
-    std::cout << std::endl;
-};
+#include "misc.hpp"
 
 template<typename T, typename A, template<typename, typename> class Container,
          typename Order>
